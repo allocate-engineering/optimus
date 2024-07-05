@@ -6,7 +6,7 @@
   <body>
     <h1>Hello from frontend!</h1>
     <script>
-      fetch("/api")
+      fetch("/api/")
         .then((response) => response.text())
         .then((data) => {
           document.body.innerHTML += `<p>Backend response: ${data}</p>`;
@@ -17,4 +17,3 @@
     </script>
   </body>
 </html>
-
