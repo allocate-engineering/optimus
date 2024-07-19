@@ -1,0 +1,12 @@
+run-tests:
+  script:
+    - make test
+#
+#
+# .build-template: &build-template
+#   image: docker:stable
+#    needs:
+#     - run-tests
+#   services:
+#     - docker:dind
+

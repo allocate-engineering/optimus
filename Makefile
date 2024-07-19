@@ -9,6 +9,16 @@ K8S_DIR=k8s
 # Default target
 all: build-backend build-frontend deploy-postgres deploy-backend deploy-frontend deploy-ingress
 
+test: test-all
+
+test-all: test-backend test-frontend
+
+test-backend:
+	echo "Running backend tests"
+
+test-frontend:
+	echo "Running frontend tests"
+
 # Local development
 run-local:
 	docker compose build
@@ -52,6 +62,6 @@ clean:
 	kubectl delete -f $(K8S_DIR)/backend-service.yaml || true
 	kubectl delete -f $(K8S_DIR)/frontend-deployment.yaml || true
 	kubectl delete -f $(K8S_DIR)/frontend-service.yaml || true
-	kubectl delete -f $(K8S_DIR)/ingress.yaml || true
 	kubectl delete -f $(K8S_DIR)/postgres-deployment.yaml || true
 	kubectl delete -f $(K8S_DIR)/postgres-service.yaml || true
+	kubectl delete -f $(K8S_DIR)/ingress.yaml || true
