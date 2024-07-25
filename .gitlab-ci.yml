@@ -10,5 +10,5 @@ run-tests:
 #   services:
 #     - docker:dind
 #   before_script:
-#     - docker && docker login --username allocateengineering --password $DOCKER_IO_TOKEN
+#     - docker login --username allocateengineering --password $DOCKER_IO_TOKEN
 
