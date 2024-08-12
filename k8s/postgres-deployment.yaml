@@ -33,6 +33,8 @@ spec:
                 - pg_isready
                 - -U
                 - myuser
+                - -d
+                - mydb
             initialDelaySeconds: 30
             periodSeconds: 10
           readinessProbe:
@@ -41,6 +43,8 @@ spec:
                 - pg_isready
                 - -U
                 - myuser
+                - -d
+                - mydb
             initialDelaySeconds: 5
             periodSeconds: 10
       volumes:
