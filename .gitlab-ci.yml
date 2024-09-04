@@ -1,5 +1,7 @@
 run-tests:
+  image: alpine
   script:
+    - apk add make
     - make test
 #
 #
