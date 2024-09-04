@@ -10,5 +10,6 @@ run-tests:
 #   services:
 #     - docker:dind
 #   before_script:
+#     - apk add make
 #     - docker login --username allocateengineering --password $DOCKER_IO_TOKEN
 
