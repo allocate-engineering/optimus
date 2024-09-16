@@ -1,7 +1,7 @@
 # Variables
 DOCKER_BACKEND_IMAGE=allocateengineering/optimus-backend
 DOCKER_FRONTEND_IMAGE=allocateengineering/optimus-frontend
-VERSION=$(shell jq -r .version backend/package.json)
+VERSION="candidate" # $(shell jq -r .version backend/package.json)
 K8S_DIR=k8s
 
 .PHONY: all build-backend build-frontend deploy-backend deploy-frontend deploy-ingress deploy-postgres
