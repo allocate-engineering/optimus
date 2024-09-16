@@ -6,12 +6,12 @@ run-tests:
 #
 #
 # .build-template: &build-template
-#   image: docker:stable
+#   image: docker:latest
 #   needs:
 #     - run-tests
 #   services:
 #     - docker:dind
 #   before_script:
-#     - apk add make
+#     - apk add make jq
 #     - docker login --username allocateengineering --password $DOCKER_IO_TOKEN
 
