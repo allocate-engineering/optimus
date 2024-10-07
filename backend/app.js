@@ -15,6 +15,11 @@ const pool = new Pool({
   connectionString: dbConnectionString,
 });
 
+pool.connect().catch((err) => {
+  console.error(err);
+  process.exit(2);
+});
+
 app.get("/", (req, res) => {
   pool.query("SELECT NOW()", (err, result) => {
     if (err) {
@@ -32,4 +37,3 @@ app.get("/health", (req, res) => {
 app.listen(port, () => {
   console.log(`Backend listening on port ${port}`);
 });
-
